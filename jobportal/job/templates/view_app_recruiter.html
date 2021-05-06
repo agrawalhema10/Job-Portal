@@ -1,0 +1,44 @@
+{% load static %}
+{% block body %}
+
+{% include 'recruiter_navigation.html' %}
+<marquee style="font-family:'Monotype times of roman'; font-size:25px; color:#00BFFF; background-color:black; margin-top:1%; font-weight:bold">
+    View Jobs
+</marquee>
+<hr>
+<div class="container">
+<table class="table table-hover" id="example">
+    <thead>
+
+    <tr style="background-color : #DEB887">
+        <th>S.No.</th>
+        <th>Candidate Name</th>
+        <th>Job Title </th>
+        <th>Mobile No.</th>
+
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+            {% for x in a %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{x.candidate.user.username}}</td>
+                         <td>{{x.job.title}}</td>
+                        <td>{{x.candidate.mobile}}</td>
+
+
+
+
+
+
+                    </tr>
+            {% endfor %}
+
+    </tbody>
+</table>
+</div>
+{% endblock %}-

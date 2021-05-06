@@ -1,0 +1,49 @@
+{% load static %}
+{% block body %}
+
+{% include 'admin_navigation.html' %}
+<marquee style="font-family:'Monotype times of roman'; font-size:25px; color:#00BFFF; background-color:black; margin-top:1%; font-weight:bold">
+    View Recruiter Pending
+</marquee>
+<hr>
+<div class="container">
+<table class="table table-hover" id="example">
+    <thead>
+
+    <tr style="background-color : #DEB887">
+        <th>S.No.</th>
+        <th>Full Name</th>
+        <th>Email ID</th>
+        <th>Contact</th>
+        <th>Gender</th>
+        <th>Company</th>
+
+        <th>Profile Image</th>
+        <th>Status</th>
+        <th>Action</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+            {% for x in data %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{x.user.first_name}} {{x.user.last_name}}</td>
+                         <td>{{x.user.username}}</td>
+                        <td>{{x.mobile}}</td>
+                        <td>{{x.gender}}</td>
+
+                         <td>{{x.company}}</td>
+
+                        <td><img src="{{x.image.url}}" style="width:100px ; height : 100px ; border-radius:50%"></td>
+                           <td>{{x.status}}</td>
+                        <td><a href="{% url 'change' x.id %}" class="btn btn-success btn-sm">Change Status</a></td>
+
+                    </tr>
+            {% endfor %}
+
+    </tbody>
+</table>
+</div>
+{% endblock %}

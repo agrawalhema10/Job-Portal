@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class=" mt-4" style="background-color:black ; width:100% ; height: 250px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-3">
+            <h3 style="color:yellow ; font-size:17px">Contact Information</h3>
+            <p style="color: white ;  font-size:15px"><i class="fa fa-map-marker text-danger" >  </i>  Danish Nagar, Sector A, Bhopal(MP)</p>
+            <p style="color: white ;  font-size:15px"><i class="fa fa-envelope text-danger">  </i>  jobportal@gmail.com</p>
+            <p style="color: white ;  font-size:15px"><i class="fa fa-mobile text-danger">  </i>  +91 8989923456 / +91 8765432989</p>
+            <p style="color: white ;  font-size:15px"><i class="fa fa-globe text-danger">  </i>  www.jobportal.com</p>
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <h3 style="color:yellow ; font-size:17px">Online Placement</h3>
+            <p style="color:white ; font-size:15px"> An employment website is a website that deals specially with employement
+            or career. Many employment websites are designed to allow employers to post job requirements for a
+            position to be filled and are commonly known as job boards.</p>
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <h3 style="color:yellow ; font-size:17px">NewsLetter</h3>
+            <p style="color:white ;  font-size:15x">If you want any extra information you can contact us here.</p>
+            <form method="post" class="form-inline">
+                {% csrf_token %}
+                    <input type="email" name="emailid" placeholder="Email ID" required class="form-control mr-2">
+                    <input type="submit" value="Send" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+
+</div>
+</div>

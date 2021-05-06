@@ -1,0 +1,43 @@
+{% load static %}
+{% block body %}
+
+{% include 'navigation.html' %}
+<marquee style="font-family:'Monotype times of roman'; font-size:25px; color:#00BFFF; background-color:black; margin-top:1%; font-weight:bold">
+    View Latest Jobs
+</marquee>
+<hr>
+<div class="container">
+<table class="table table-hover" id="example">
+    <thead>
+
+    <tr style="background-color : #DEB887">
+        <th>S.No.</th>
+        <th>Title</th>
+        <th>Posted </th>
+        <th>Description</th>
+        <th>Salary</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+            {% for x in obj %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{x.title}}</td>
+                         <td>{{x.creationdate}}</td>
+                        <td>{{x.description}}</td>
+                        <td>{{x.salary}}</td>
+
+
+
+
+
+
+                    </tr>
+            {% endfor %}
+
+    </tbody>
+</table>
+</div>
+{% endblock %}

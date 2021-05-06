@@ -1,0 +1,98 @@
+{% load static %}
+
+{% block body%}
+
+{% include 'navigation.html'%}
+<style>
+
+.container{
+    max-width: 98%
+}
+
+.contents{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    height:30px ;
+    width:91%;
+}
+</style>
+<div class="form-row">
+    <div class="container-fluid pt-3 col-md-6">
+        <img src="{% static 'images/index.jpg' %}" style="height:180px; width:100%">
+    </div>
+    <div class="container-fluid pt-3 col-md-6">
+        <img src="{% static 'images/index.jpg' %}" style="height:180px; width:100%">
+    </div>
+</div>
+
+<div class="container" style="background-color: black ; height:550px; margin-top:4%">
+<h2 class="text-center text-white">----------| OUR PLACED STUDENTS |----------</h2>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/stud1.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:60%">
+            <div class="contents">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/images_3.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>TCS</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stud3.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>Cisco</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/download_3.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>Wipro</p>
+            </div>
+        </div>
+    </div><br><br><br>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/images_4.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>Amazon</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stud2.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>LinkedIn</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/download_4.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>Infosys</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stud4.jfif'%}" style="width:60% ; margin-top:5% ; height:150px ; border-radius:50%">
+            <div class="contents">
+                <p>IBM</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}
